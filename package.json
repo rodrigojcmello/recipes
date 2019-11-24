@@ -1,0 +1,42 @@
+{
+  "name": "react-recipes",
+  "version": "1.0.0",
+  "description": "A starter for React-Apollo-GraphQL projects",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon --watch 'server/**/*.ts' --ignore '**/*.spec.ts' --exec ts-node -P tsconfig.json server/index.ts",
+    "client": "cd client && npm start",
+    "dev": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.9.12",
+    "bcrypt": "^3.0.7",
+    "concurrently": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.12"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/mongoose": "^5.5.32",
+    "@types/node": "^12.12.12",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "eslint": "^6.7.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "nodemon": "^2.0.1",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  }
+}
